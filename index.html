@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Criptografia</title>
+    <link rel="stylesheet" href="./styles/main.css" />
+    <link rel="stylesheet" href="./styles/reset.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    />
+  </head>
+  <body>
+    <main>
+      <header>
+        <div class="logo-container">
+          <img class="logo_site" src="./src/logo.png" alt="Logo da Alura" />
+        </div>
+        <button onclick="toggleDarkMode()" class="dark_button">
+          <i id="dark_mode_icon" class="fas fa-moon fa-2x"></i>
+        </button>
+      </header>
+      <section class="main_user_text">
+        <textarea
+          class="text_encrypt"
+          placeholder="Digite seu texto"
+        ></textarea>
+        <p class="main_disclaimer">
+          <img src="./src/exclaimer.png" alt="" />Apenas letras minúsculas e sem
+          acento.
+        </p>
+        <div class="main_buttons">
+          <button
+            class="btn-encriptar"
+            onclick="btnCriptografar(); btnAnimation(this)"
+          >
+            Criptografar
+          </button>
+          <button
+            class="btn-descriptografar"
+            onclick="btnDescriptografar(); btnAnimation(this)"
+          >
+            Descriptografar
+          </button>
+        </div>
+      </section>
+      <section class="main_display_text">
+        <div class="textarea-container">
+          <textarea
+            class="msg"
+            cols="20"
+            rows="10"
+            oninput="verificarTexto()"
+          ></textarea>
+        </div>
+        <p class="mensagem"></p>
+        <button class="btn-copiar" onclick="copiarTexto()">Copiar</button>
+      </section>
+    </main>
+    <footer></footer>
+
+    <script src="./script/main.js"></script>
+  </body>
+</html>

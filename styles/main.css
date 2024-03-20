@@ -1,0 +1,259 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
+
+* {
+  font-size: 1rem;
+  font-family: Inter, sans-serif;
+}
+
+:root {
+  --mainColor: #0a3871;
+  --secondaryColor: #f3f5fc;
+  --darkColor: #4279bd;
+}
+
+body {
+  width: 100%;
+  height: 100vh;
+  background-color: var(--secondaryColor);
+}
+
+main {
+  position: relative;
+  display: flex;
+  height: 100vh;
+}
+
+header {
+  display: flex;
+  height: 15%;
+  align-items: center;
+}
+
+.dark_button {
+  margin-top: 2rem;
+  background: none;
+  border: 2px solid var(--mainColor);
+  border-radius: 30px;
+  width: 50px;
+  height: 50px;
+  color: var(--mainColor);
+}
+
+.logo_site {
+  margin-top: 2rem;
+}
+
+/* TEXT AREA STYLE */
+
+.main_user_text {
+  width: 70%;
+  border: 1px solid #000000;
+  padding: 2.5rem;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border: none;
+}
+
+.text_encrypt {
+  border: none;
+  width: 70%;
+  background-color: transparent;
+  resize: none;
+  margin-top: 5rem;
+  color: var(--mainColor);
+  font-size: 2rem;
+  overflow: hidden;
+  align-self: center;
+  min-height: 73%;
+}
+
+.text_encrypt:focus {
+  outline: none;
+}
+
+.text_encrypt::placeholder {
+  color: inherit;
+  opacity: 1;
+}
+
+.text_encrypt::-ms-input-placeholder {
+  color: inherit;
+  opacity: 1;
+}
+
+/* BUTTONS */
+
+.main_buttons {
+  margin: 0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding-right: 2.5rem;
+}
+
+.main_disclaimer {
+  width: 44rem;
+  align-self: center;
+  display: flex;
+  align-items: center;
+}
+
+.main_disclaimer img {
+  margin-right: 0.5rem;
+}
+
+.main_buttons button {
+  width: 20.5rem;
+  padding: 1.5rem 0;
+  border-radius: 1.5rem;
+  border: 1px solid var(--mainColor);
+  background-color: #d8dfe8;
+}
+
+.main_buttons button:not(:last-child) {
+  margin-right: 20px;
+  background-color: var(--mainColor);
+  color: #e5e5e5;
+}
+
+/* DISPLAY AREA STYLE */
+
+.msg {
+  text-align: left;
+  padding: 1.5rem;
+}
+
+.msg,
+.textarea-container {
+  background: #fff url(../src/figure.png) center no-repeat;
+  border: none;
+  border-radius: 24px;
+  width: 95%;
+  resize: none;
+  overflow: hidden;
+  min-height: 73%;
+}
+
+.msg:focus {
+  outline: none;
+}
+
+.hide-background {
+  background: none !important;
+}
+
+.hide-text-dynamic {
+  display: none;
+}
+
+.textarea-container {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  background: none;
+  text-align: center;
+  gap: 1rem;
+  color: var(--mainColor);
+}
+
+.text_encrypt:focus {
+  outline: none;
+}
+
+.btn-copiar {
+  width: 20.5rem;
+  padding: 1.5rem 0;
+  border-radius: 1.5rem;
+  border: 1px solid var(--mainColor);
+  background-color: #d8dfe8;
+}
+
+.main_display_text {
+  max-width: 25rem;
+  border: none;
+  width: 30%;
+  margin: 2.5rem;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  border-radius: 2rem;
+  box-shadow: 0px 24px 32px -12px rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.copiado-animation {
+  animation: pulse 0.5s linear;
+}
+
+@keyframes pulseBack {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(0.9);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.btn-animation {
+  animation: pulseBack 0.2s linear;
+}
+
+/* DARK MODE */
+
+.dark-mode {
+  background-color: var(--mainColor);
+  color: var(--secondaryColor);
+}
+
+.dark-mode .dark_button {
+  color: var(--secondaryColor);
+  border: 2px solid var(--secondaryColor);
+}
+
+.dark-mode .logo_site {
+  filter: brightness(0) invert(100%);
+}
+
+.dark-mode .text_encrypt {
+  color: var(--secondaryColor);
+}
+
+.dark-mode .btn-encriptar {
+  border: 1px solid var(--secondaryColor);
+}
+
+.dark-mode .main_disclaimer img {
+  filter: brightness(0) invert(100%);
+}
+
+.dark-mode .main_display_text {
+  background-color: var(--darkColor);
+}
+
+.dark-mode .msg {
+  background-color: var(--darkColor);
+  color: var(--secondaryColor);
+}
+
+.dark-mode .textarea-container {
+  color: var(--secondaryColor);
+}
