@@ -16,4 +16,4 @@ Cada geração de alunos passa por uma jornada de 6 meses, dividida em 4 trilhas
 
 ---
 
-Para acessar o projeto basta clicar AQUI! 😉
+Para acessar o projeto basta clicar [AQUI](https://juniord-dev.github.io/decodificador-javascript/)! 😉
